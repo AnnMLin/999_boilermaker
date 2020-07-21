@@ -5,7 +5,8 @@ const { User } = require('../db')
 router.get('/', (req, res, next) => {
   User.findAll()
     .then(users => {
-      res.status(200).send(transactions)
+      console.log(users)
+      res.status(200).send(users)
     })
     .catch(err => {
       next(err)

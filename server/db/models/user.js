@@ -25,7 +25,7 @@ const User = db.define('user', {
       notEmpty: true,
       isEmail: true
     }
-  },
+  }/*,
   password: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -38,11 +38,11 @@ const User = db.define('user', {
     get() {
       return () => this.getDataValue('salt')
     }
-  }
+  }*/
 })
 
 module.exports = User
-
+/*
 // CLASS METHODS
 User.generateSalt = function() {
   return crypto.randomBytes(16).toString('base64')
@@ -74,3 +74,4 @@ User.beforeBulkCreate(users => {
 User.prototype.correctPassword = function(enteredPassword) {
   return User.encryptPassword(enteredPassword, this.salt()) === this.password()
 }
+*/

@@ -20,7 +20,7 @@ app.use('/user', user)
 
 // send index.html for any other requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'))
+  res.sendFile(path.join(__dirname, '../client/public/index.html'))
 })
 
 // error handling middleware
